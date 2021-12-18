@@ -123,14 +123,9 @@ echo "#    Building project     #"
 echo "###########################"
 echo ""
 
-echo "###########################"
-echo "######### DIR #############"
-ls -la
-echo "###########################"
-
 # Reference: https://docs.unity3d.com/2019.3/Documentation/Manual/CommandLineArguments.html
 
-./heartbit.sh& unity-editor \
+/steps/heartbit.sh& unity-editor \
   -logfile /dev/stdout \
   -quit \
   -customBuildName "$BUILD_NAME" \
