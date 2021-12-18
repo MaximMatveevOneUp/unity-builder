@@ -125,7 +125,7 @@ echo ""
 
 # Reference: https://docs.unity3d.com/2019.3/Documentation/Manual/CommandLineArguments.html
 
-unity-editor \
+./heartbit.sh& unity-editor \
   -logfile /dev/stdout \
   -quit \
   -customBuildName "$BUILD_NAME" \
