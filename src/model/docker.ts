@@ -49,6 +49,8 @@ class Docker {
     const commandPrefix = image === `alpine` ? `/bin/sh` : `/bin/bash`;
 
     return `docker run \
+            --isolation=hyperv \
+            --env LLLLLLL \
             --workdir ${dockerWorkspacePath} \
             --rm \
             ${ImageEnvironmentFactory.getEnvVarString(parameters, additionalVariables)} \
@@ -76,6 +78,7 @@ class Docker {
 
     return `docker run \
             --isolation=hyperv \
+            --env WWWWWW \
             --workdir c:${dockerWorkspacePath} \
             --rm \
             ${ImageEnvironmentFactory.getEnvVarString(parameters)} \
