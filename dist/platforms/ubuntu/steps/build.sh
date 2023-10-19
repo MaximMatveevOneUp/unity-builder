@@ -117,8 +117,27 @@ echo ""
 
 # Reference: https://docs.unity3d.com/2019.3/Documentation/Manual/CommandLineArguments.html
 
+echo \
+  $( [ "${MANUAL_EXIT}" == "true" ] || echo "-quit" ) \
+  -customBuildName "$BUILD_NAME" \
+  -projectPath "$UNITY_PROJECT_PATH" \
+  -buildTarget "$BUILD_TARGET" \
+  -customBuildTarget "$BUILD_TARGET" \
+  -customBuildPath "$CUSTOM_BUILD_PATH" \
+  -executeMethod "$BUILD_METHOD" \
+  -buildVersion "$VERSION" \
+  -androidVersionCode "$ANDROID_VERSION_CODE" \
+  -androidKeystoreName "$ANDROID_KEYSTORE_NAME" \
+  -androidKeystorePass "$ANDROID_KEYSTORE_PASS" \
+  -androidKeyaliasName "$ANDROID_KEYALIAS_NAME" \
+  -androidKeyaliasPass "$ANDROID_KEYALIAS_PASS" \
+  -androidTargetSdkVersion "$ANDROID_TARGET_SDK_VERSION" \
+  -androidExportType "$ANDROID_EXPORT_TYPE" \
+  -androidSymbolType "$ANDROID_SYMBOL_TYPE" \
+  $CUSTOM_PARAMETERS
+
+
 unity-editor \
-  -logfile /dev/stdout \
   $( [ "${MANUAL_EXIT}" == "true" ] || echo "-quit" ) \
   -customBuildName "$BUILD_NAME" \
   -projectPath "$UNITY_PROJECT_PATH" \
